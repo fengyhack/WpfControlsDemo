@@ -1,0 +1,45 @@
+﻿<Page x:Class="WpfControlsDemo.View.LoginFlyout"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:local="clr-namespace:WpfControlsDemo.View"
+      xmlns:vext="clr-namespace:WpfControlsDemo.View.Extended"
+      xmlns:CWC="clr-namespace:CuteWpfControls;assembly=CuteWpfControls"
+      Width="600" Height="450" Title="LoginFlyout">
+    <Page.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="pack://application:,,,/CuteWpfControls;component/Flyout/Theme.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/CuteWpfControls;component/GenericStyles/FlatButton.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Page.Resources>
+    <Grid Background="WhiteSmoke">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Button Name="loginButton" Style="{StaticResource FlatButton}" Grid.Row="0" Width="100" Height="30" Content="Login" Click="loginButton_Click" />
+        <CWC:Flyout Name="flyout" Grid.Row="1" Width="400" Height="300" IsAnimated="True" FadePosition="Top" Background="#AACCEF" Margin="10">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="4*" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <StackPanel Grid.Row="0" Orientation="Vertical" VerticalAlignment="Center">
+                    <StackPanel Margin="0 20" Orientation="Horizontal" HorizontalAlignment="Center">
+                        <Label Width="80" Height="30" VerticalContentAlignment="Center">Username:</Label>
+                        <TextBox Width="200" Height="30" VerticalContentAlignment="Center" />
+                    </StackPanel>
+                    <StackPanel Margin="0 20" Orientation="Horizontal" HorizontalAlignment="Center">
+                        <Label Width="80" Height="30" VerticalContentAlignment="Center">Password:</Label>
+                        <PasswordBox Width="200" Height="30" VerticalContentAlignment="Center" vext:PasswordBoxHelper.Attach="True" />
+                    </StackPanel>
+                </StackPanel>
+                <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Top">
+                    <Button Style="{StaticResource FlatButton}" Width="100" Height="30" Margin="10 0" Content="Login" Click="Button_Confirm_Click" />
+                    <Button Style="{StaticResource FlatButton}" Width="100" Height="30" Margin="10 0" Content="Cancel" Click="Button_Cancel_Click" />
+                </StackPanel>
+            </Grid>
+        </CWC:Flyout>
+    </Grid>
+</Page>

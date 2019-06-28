@@ -1,0 +1,24 @@
+﻿<Page x:Class="WpfControlsDemo.View.BusyMaskView"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:local="clr-namespace:WpfControlsDemo.View"
+      xmlns:vm="clr-namespace:WpfControlsDemo.ViewModel"
+      xmlns:CWC="clr-namespace:CuteWpfControls;assembly=CuteWpfControls"
+      Width="600" Height="450" Title="BusyMaskView">
+    <Page.DataContext>
+        <vm:BusyMaskViewModel />
+    </Page.DataContext>
+    <Page.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="pack://application:,,,/CuteWpfControls;component/BusyMask/Theme.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/CuteWpfControls;component/LoadingIndicator/Theme.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/CuteWpfControls;component/GenericStyles/FlatButton.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Page.Resources>
+    <Grid Background="WhiteSmoke">
+        <Button Style="{StaticResource FlatButton}" Width="100" Height="30" Content="StartTest" IsEnabled="{Binding CanStartTest}" Command="{Binding TestBusy}" />
+        <CWC:BusyMask IsBusy="{Binding IsBusy,Mode=OneWay}" IndicatorType="DoubleRound"  IndicatorForeground="#9966FF" Foreground="#EEEEFF"/>
+    </Grid>
+</Page>

@@ -1,0 +1,43 @@
+﻿<Page x:Class="WpfControlsDemo.View.TimelineView"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:WpfControlsDemo.View"
+      xmlns:CWC="clr-namespace:CuteWpfControls;assembly=CuteWpfControls"
+      Width="500" Height="500"
+      Title="TimelineView">
+    <Page.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="pack://application:,,,/CuteWpfControls;component/Timeline/Theme.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/CuteWpfControls;component/GenericStyles/FlatButton.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Page.Resources>
+    <Grid  Background="#EEFFEE">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Button Grid.Row="0" Style="{StaticResource FlatButton}" Width="100" Height="30" Margin="0 5" Content="Refresh" Click="Button_Click"/>
+        <CWC:Timeline x:Name="timeline" Grid.Row="1" UseDefaultSlotTemplate="True" Margin="20 10" Background="#EEFFEE">
+            <CWC:Timeline.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Vertical">
+                        <TextBlock x:Name="timePart" Text="{Binding Time,StringFormat='yyyy-MM-dd HH:mm:ss.fff'}" Margin="5,0,0,0" FontSize="14" Foreground="OrangeRed" />
+                        <TextBlock Text="{Binding Text}" TextWrapping="Wrap" FontSize="12" Margin="5,0,0,10" />
+                    </StackPanel>
+                </DataTemplate>
+            </CWC:Timeline.ItemTemplate>
+            <!--
+            <CWC:Timeline.SlotTemplate>
+                <DataTemplate>
+                    <Border x:Name="border" Width="16" Height="16" CornerRadius="8" BorderThickness="2"
+                              SnapsToDevicePixels="True" UseLayoutRounding="True" />
+                </DataTemplate>
+            </CWC:Timeline.SlotTemplate>
+            -->
+        </CWC:Timeline>
+    </Grid>
+</Page>

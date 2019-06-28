@@ -1,0 +1,44 @@
+﻿<Page x:Class="WpfControlsDemo.View.ImageButtons"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:local="clr-namespace:WpfControlsDemo.View"
+      xmlns:CWC="clr-namespace:CuteWpfControls;assembly=CuteWpfControls"
+      Width="400" Height="400"
+      Title="ImageButtons">
+    <Page.Resources>
+        <ResourceDictionary Source="pack://application:,,,/CuteWpfControls;component/ImageButton/Theme.xaml" />
+    </Page.Resources>
+    <Grid>
+        <TextBlock HorizontalAlignment="Center" Text="Click these buttons below" Margin="0,0,0,20" />
+        <UniformGrid Rows="2">
+            <CWC:ImageButton Width="80" Height="80" Click="ImageButton_Click">
+                <CWC:ImageButton.Style>
+                    <Style TargetType="CWC:ImageButton">
+                        <Setter Property="Template">
+                            <Setter.Value>
+                                <ControlTemplate TargetType="{x:Type CWC:ImageButton}">
+                                    <Rectangle>
+                                        <Rectangle.Fill>
+                                            <ImageBrush ImageSource="{Binding ImagePath, RelativeSource={RelativeSource TemplatedParent}}" Stretch="UniformToFill"/>
+                                        </Rectangle.Fill>
+                                    </Rectangle>
+                                    <ControlTemplate.Triggers>
+                                        <Trigger Property="IsMouseOver" Value="True">
+                                            <Setter Property="ImagePath" Value="./Images/basketball.png" />
+                                        </Trigger>
+                                        <Trigger Property="IsMouseOver" Value="False">
+                                            <Setter Property="ImagePath" Value="./Images/football.png" />
+                                        </Trigger>
+                                    </ControlTemplate.Triggers>
+                                </ControlTemplate>
+                            </Setter.Value>
+                        </Setter>
+                    </Style>
+                </CWC:ImageButton.Style>
+            </CWC:ImageButton>
+            <CWC:ImageButton Width="80" Height="80" ImagePath="./Images/buy_button.png" Click="ImageButton_Click" />
+            <CWC:ImageButton Width="80" Height="80" ImagePath="./Images/folder_heart.png" Click="ImageButton_Click" />
+            <CWC:ImageButton Width="80" Height="80" ImagePath="./Images/play_button.png" Click="ImageButton_Click" />
+        </UniformGrid>
+    </Grid>
+</Page>
