@@ -50,3 +50,9 @@ Install-Package CuteWpfControls
 9.ScrollViewer
 
 ![solidGauge](doc/imgs/09-scrollViewer.gif)
+
+
+
+10. StepBar
+
+    ![stepBar](doc/imgs/10-stepBar.gif)

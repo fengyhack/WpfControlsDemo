@@ -27,6 +27,7 @@ namespace WpfControlsDemo
             var loginFlyout = new View.LoginFlyout();
             var imageButtons = new View.ImageButtons();
             var timelineView = new View.TimelineView();
+            var stepBarView = new View.StepBarView();
             var inputBoxView = new View.InputBoxView();
             var solidGauge = new View.SolidGauge();
             var scrollView = new View.ScrollView();
@@ -37,6 +38,7 @@ namespace WpfControlsDemo
             contentDict.Add("LoginFlyout", loginFlyout);
             contentDict.Add("ImageButtons", imageButtons);
             contentDict.Add("Timeline", timelineView);
+            contentDict.Add("StepBar", stepBarView);
             contentDict.Add("InputBox", inputBoxView);
             contentDict.Add("SolidGauge", solidGauge);
             contentDict.Add("ScrollView", scrollView);

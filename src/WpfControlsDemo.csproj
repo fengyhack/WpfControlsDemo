@@ -37,10 +37,6 @@
     <ApplicationIcon>demo.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="CuteWpfControls, Version=1.0.8.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\CuteWpfControls.1.0.8\lib\net40\CuteWpfControls.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
@@ -88,6 +84,9 @@
     <Compile Include="View\SolidGauge.xaml.cs">
       <DependentUpon>SolidGauge.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\StepBarView.xaml.cs">
+      <DependentUpon>StepBarView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\TimelineView.xaml.cs">
       <DependentUpon>TimelineView.xaml</DependentUpon>
     </Compile>
@@ -131,6 +130,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Page Include="View\StepBarView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\TimelineView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -154,7 +157,6 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -175,6 +177,12 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="demo.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\CuteWpfControls\src\CuteWpfControls.csproj">
+      <Project>{fd44ac3a-4a57-4034-a6a7-068392a68479}</Project>
+      <Name>CuteWpfControls</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

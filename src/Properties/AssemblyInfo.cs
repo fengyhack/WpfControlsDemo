@@ -12,7 +12,7 @@ using System.Windows;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("https://fengyh.cn/")]
 [assembly: AssemblyProduct("WpfControlsDemo")]
-[assembly: AssemblyCopyright("Copyleft ©  2018")]
+[assembly: AssemblyCopyright("Copyleft © 2019")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
