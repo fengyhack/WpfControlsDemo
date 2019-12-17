@@ -178,12 +178,6 @@
   <ItemGroup>
     <Resource Include="demo.ico" />
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\..\CuteWpfControls\src\CuteWpfControls.csproj">
-      <Project>{fd44ac3a-4a57-4034-a6a7-068392a68479}</Project>
-      <Name>CuteWpfControls</Name>
-    </ProjectReference>
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
