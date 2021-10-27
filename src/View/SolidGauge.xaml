@@ -7,7 +7,7 @@
       xmlns:CWC="clr-namespace:CuteWpfControls;assembly=CuteWpfControls"
       Title="SolidGauge" Background="WhiteSmoke">
     <Page.Resources>
-        <ResourceDictionary Source="pack://application:,,,/CuteWpfControls;component/GenericStyles/FlatButton.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/CuteWpfControls;component/Resources/ButtonStyle.xaml" />
     </Page.Resources>
     <Grid Margin="20">
         <Grid.RowDefinitions>

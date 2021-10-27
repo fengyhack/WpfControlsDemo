@@ -13,12 +13,12 @@
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="pack://application:,,,/CuteWpfControls;component/BusyMask/Theme.xaml" />
                 <ResourceDictionary Source="pack://application:,,,/CuteWpfControls;component/LoadingIndicator/Theme.xaml" />
-                <ResourceDictionary Source="pack://application:,,,/CuteWpfControls;component/GenericStyles/FlatButton.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/CuteWpfControls;component/Resources/ButtonStyle.xaml" />
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Page.Resources>
     <Grid Background="WhiteSmoke">
         <Button Style="{StaticResource FlatButton}" Width="100" Height="30" Content="StartTest" IsEnabled="{Binding CanStartTest}" Command="{Binding TestBusy}" />
-        <CWC:BusyMask IsBusy="{Binding IsBusy,Mode=OneWay}" IndicatorType="DoubleRound"  IndicatorForeground="#9966FF" Foreground="#EEEEFF"/>
+        <CWC:BusyMask IsBusy="{Binding IsBusy,Mode=OneWay}" IndicatorType="DoubleArc" IndicatorForeground="#A966FF" Foreground="#EEEEFF"/>
     </Grid>
 </Page>

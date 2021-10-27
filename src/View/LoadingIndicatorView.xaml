@@ -1,0 +1,33 @@
+﻿<Page
+    x:Class="WpfControlsDemo.View.LoadingIndicatorView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:CWC="clr-namespace:CuteWpfControls;assembly=CuteWpfControls"
+    xmlns:local="clr-namespace:WpfControlsDemo.View"
+    xmlns:vm="clr-namespace:WpfControlsDemo.ViewModel"
+    Title="LoadingINdicatorView"
+    Width="600"
+    Height="450">
+    <Page.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="pack://application:,,,/CuteWpfControls;component/LoadingIndicator/Theme.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Page.Resources>
+    <UniformGrid
+        Background="WhiteSmoke"
+        Columns="4"
+        Rows="4">
+        <CWC:LoadingIndicator IndicatorType="DoubleRound" />
+        <CWC:LoadingIndicator IndicatorType="SingleRound" />
+        <CWC:LoadingIndicator IndicatorType="DoubleArc" />
+        <CWC:LoadingIndicator IndicatorType="Cogs" />
+        <CWC:LoadingIndicator IndicatorType="Win10Circle" />
+        <CWC:LoadingIndicator IndicatorType="Apple" />
+        <CWC:LoadingIndicator IndicatorType="Normal" />
+        <CWC:LoadingIndicator IndicatorType="Circling" />
+        <CWC:LoadingIndicator IndicatorType="LineWave" />
+        <CWC:LoadingIndicator IndicatorType="RushFlow" />
+    </UniformGrid>
+</Page>

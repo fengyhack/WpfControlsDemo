@@ -49,7 +49,7 @@ namespace WpfControlsDemo.ViewModel
                     {
                         IsBusy = true;
                         CanStartTest = false;
-                        await Task.Run(() => { Thread.Sleep(3000); });
+                        await Task.Run(() => { Thread.Sleep(5000); });
                         IsBusy = false;
                         CanStartTest = true;
                     }));

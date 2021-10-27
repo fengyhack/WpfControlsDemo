@@ -15,42 +15,64 @@ Install-Package CuteWpfControls
 
 **What is in it**
 
-1.BusyMask
+1. Loading
 
-![busyMask](doc/imgs/01-busyMask.gif)
+   ![loading](doc/imgs/01-Loading.gif)
 
-2.TreeView
+2. BusyMask
 
-![treeView](doc/imgs/02-treeView.gif)
+![busyMask](doc/imgs/02-BusyMask.gif)
 
-3.PhotoViewer: Panning & Zooming
+3. TreeView
 
-![photoViewer](doc/imgs/03-photoViewer.gif)
+![treeView](doc/imgs/03-TreeView.gif)
 
-4.LoginFlyout: Fly Animation
+4. PhotoViewer: Panning & Zooming
 
-![loginFlyout](doc/imgs/04-loginFlyout.gif)
+![photoViewer](doc/imgs/04-PhotoViewer.gif)
 
-5.ImageButton
+5. LoginFlyout: Fly Animation
 
-![imageButton](doc/imgs/05-imageButton.gif)
+![loginFlyout](doc/imgs/05-LoginFlyout.gif)
 
-6.Timeline
+6. ImageButton
 
-![timeline](doc/imgs/06-timeline.gif)
+![imageButton](doc/imgs/06-ImageButton.gif)
 
-7.Inputbox
+7. Timeline
 
-![inputBox](doc/imgs/07-inputBox.gif)
+![timeline](doc/imgs/07-Timeline.gif)
 
-8.SolidGauge
+8. StepBar
 
-![solidGauge](doc/imgs/08-solidGauge.gif)
+![stepBar](doc/imgs/08-StepBar.gif)
 
-9.ScrollViewer
+9. Inputbox
 
-![solidGauge](doc/imgs/09-scrollViewer.gif)
+![inputBox](doc/imgs/09-InputBox.gif)
 
-10. StepBar
+10. SolidGauge
 
-![stepBar](doc/imgs/10-stepBar.gif)
+![solidGauge](doc/imgs/10-SolidGauge.gif)
+
+11. ScrollViewer
+
+![solidGauge](doc/imgs/11-ScrollViewer.gif)2.
+
+12. Badge
+
+    ![badge](doc/imgs/12-Badge.gif)
+
+13. Toggle
+
+    ![toggle](doc/imgs/13-ToggleControl.gif)
+
+14. FlatSlider
+
+    ![flatSlider](doc/imgs/14-FlatSlider.gif)
+
+
+
+---
+
+2021.10.21

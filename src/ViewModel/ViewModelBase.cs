@@ -3,7 +3,7 @@ using System.Runtime.CompilerServices;
 
 namespace WpfControlsDemo.ViewModel
 {
-    public class ViewModelBase:INotifyPropertyChanged
+    public class ViewModelBase : INotifyPropertyChanged
     {
         #region INotifyPaopertyChanged
 

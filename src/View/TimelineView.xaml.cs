@@ -28,8 +28,9 @@ namespace WpfControlsDemo.View
         }
 
         private string text = "Something happend at some place.";
-        private const int COUNT = 5;
         private bool add = false;
+        private int count = 0;
+        private Random rand = new Random();
 
         private void InitDataItems()
         {
@@ -37,9 +38,9 @@ namespace WpfControlsDemo.View
 
             var time = DateTime.Now.AddMonths(-10);
 
-            for (int i = 0; i < COUNT; ++i)
+            count = 5;
+            for (int i = 0; i < count; ++i)
             {
-
                 itemList.Add(new DataItem()
                 {
                     Time = time,
@@ -51,25 +52,33 @@ namespace WpfControlsDemo.View
 
         private void UpdateDataItems()
         {
-            var time = DateTime.Now.AddMonths(-10);
+            var time = itemList.Count > 0 ? itemList[0].Time : DateTime.Now.AddMonths(-10);
 
             if (add)
             {
-                itemList.Insert(1, new DataItem()
+                itemList.Insert(0, new DataItem()
                 {
-                    Time = time,
+                    Time = time.AddDays(-1),
                     Text = "Something happend at some place."
                 });
-                itemList.Insert(2, new DataItem()
+                itemList.Insert(0, new DataItem()
                 {
-                    Time = time,
+                    Time = time.AddDays(-2),
                     Text = "Something happend at some place."
                 });
+                count += 2;
+                timeline.ItemsSource = null;
+                timeline.ItemsSource = itemList;
             }
             else
             {
-                itemList.RemoveAt(COUNT-1);
-                itemList.RemoveAt(1);
+                if (count > 1)
+                {
+                    itemList.RemoveAt(count - 1);
+                    --count;
+                }
+                timeline.ItemsSource = null;
+                timeline.ItemsSource = itemList;
             }
 
             foreach (var item in itemList)
@@ -78,7 +87,7 @@ namespace WpfControlsDemo.View
                 item.Text = "Nothing" + text.Substring("Something".Length);
             }
 
-            add = !add;
+            add = count < 2 || rand.Next(100) > 70;
         }
     }
 

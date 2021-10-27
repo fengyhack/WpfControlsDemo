@@ -55,19 +55,24 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App.cs" />
+    <Compile Include="ViewModel\BadgeViewModel.cs" />
     <Compile Include="ViewModel\BusyMaskViewModel.cs" />
     <Compile Include="ViewModel\DelegateCommand.cs" />
     <Compile Include="ViewModel\ViewModelBase.cs" />
+    <Compile Include="View\BadgeView.xaml.cs">
+      <DependentUpon>BadgeView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\BusyMaskView.xaml.cs">
       <DependentUpon>BusyMaskView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="View\Extended\PasswordBoxHelper.cs" />
-    <Compile Include="View\Extended\ZoomBorder.cs" />
     <Compile Include="View\InputBoxView.xaml.cs">
       <DependentUpon>InputBoxView.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\ImageButtons.xaml.cs">
       <DependentUpon>ImageButtons.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\LoadingIndicatorView.xaml.cs">
+      <DependentUpon>LoadingIndicatorView.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\LoginFlyout.xaml.cs">
       <DependentUpon>LoginFlyout.xaml</DependentUpon>
@@ -81,6 +86,9 @@
     <Compile Include="View\ScrollView.xaml.cs">
       <DependentUpon>ScrollView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\SliderView.xaml.cs">
+      <DependentUpon>SliderView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\SolidGauge.xaml.cs">
       <DependentUpon>SolidGauge.xaml</DependentUpon>
     </Compile>
@@ -90,6 +98,9 @@
     <Compile Include="View\TimelineView.xaml.cs">
       <DependentUpon>TimelineView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\ToggleControl.xaml.cs">
+      <DependentUpon>ToggleControl.xaml</DependentUpon>
+    </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -98,6 +109,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="View\BadgeView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\BusyMaskView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -107,6 +122,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\ImageButtons.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\LoadingIndicatorView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -126,6 +145,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="View\SliderView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\SolidGauge.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -135,6 +158,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\TimelineView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\ToggleControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -177,6 +204,12 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="demo.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\CuteWpfControls\src\CuteWpfControls.csproj">
+      <Project>{fd44ac3a-4a57-4034-a6a7-068392a68479}</Project>
+      <Name>CuteWpfControls</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

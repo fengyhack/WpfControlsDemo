@@ -1,0 +1,43 @@
+﻿<Page
+    x:Class="WpfControlsDemo.View.BadgeView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:CWC="clr-namespace:CuteWpfControls;assembly=CuteWpfControls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:vm="clr-namespace:WpfControlsDemo.ViewModel"
+    Title="BadgeView"
+    d:DesignHeight="450"
+    d:DesignWidth="800"
+    mc:Ignorable="d">
+
+    <Page.Resources>
+        <ResourceDictionary>
+            <BooleanToVisibilityConverter x:Key="BooleanToVisibility" />
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="pack://application:,,,/CuteWpfControls;component/Resources/ButtonStyle.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Page.Resources>
+
+    <Page.DataContext>
+        <vm:BadgeViewModel />
+    </Page.DataContext>
+
+    <Grid>
+        <AdornerDecorator>
+            <Button
+                Width="200"
+                Height="50"
+                CWC:BadgeAdorner.Background="Red"
+                CWC:BadgeAdorner.BadgeAlignment="RightBottom"
+                CWC:BadgeAdorner.BadgeText="{Binding Text}"
+                CWC:BadgeAdorner.BadgeVisibility="{Binding Show, Converter={StaticResource BooleanToVisibility}}"
+                CWC:BadgeAdorner.CornerRadius="10"
+                CWC:BadgeAdorner.Foreground="LawnGreen"
+                Command="{Binding TestBadge}"
+                Content="Test"
+                Style="{StaticResource FlatButton}" />
+        </AdornerDecorator>
+    </Grid>
+</Page>

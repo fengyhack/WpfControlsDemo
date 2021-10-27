@@ -9,7 +9,7 @@
       d:DesignHeight="300" d:DesignWidth="300"
       Title="ScrollView">
     <Page.Resources>
-        <ResourceDictionary Source="pack://application:,,,/CuteWpfCOntrols;component/GenericStyles/FlatScrollViewer.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/CuteWpfCOntrols;component/Resources/ScrollViewerStyle.xaml" />
     </Page.Resources>
     <Grid>
         <ScrollViewer Style="{StaticResource FlatScrollViewer}" Width="600" Height="600">
